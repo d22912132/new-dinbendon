@@ -14,12 +14,12 @@ class CreateRestaurantsTable extends Migration
     public function up()
     {
         Schema::create('restaurants', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->integer('tel');
-            $table->string('address');
-            $table->string('cover');
-            $table->string('menu');
+            $table->increments('id');
+            $table->string('res_name');
+            $table->integer('res_tel');
+            $table->string('res_address');
+            $table->string('res_cover');
+            $table->string('res_menu');
             $table->timestamps();
         });
     }

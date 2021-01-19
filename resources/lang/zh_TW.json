@@ -171,12 +171,15 @@
     "Toggle navigation": "縮放導覽工具",
     "Register": "註冊",
     "Name": "姓名",
+    "Res name": "餐廳名稱",
     "Logout": "登出",
     "Address": "地址",
-    "Tel": "聯絡電話",
+    "tel": "電話",
+    "Res address": "餐廳地址",
+    "Res tel": "聯絡電話",
     "Id": "編號",
-    "Cover": "餐廳圖片",
+    "Res cover": "餐廳圖片",
     "Created at": "建立時間",
     "Updated at": "更新時間",
-    "Menu" : "菜單圖片"
+    "Res menu" : "菜單圖片"
 }

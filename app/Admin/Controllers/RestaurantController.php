@@ -18,6 +18,38 @@ class RestaurantController extends AdminController
      */
     protected $title = 'Restaurant';
 
+
+    public function index(Content $content)
+    {
+        return $content
+            ->header('餐聽管理')
+            ->description('管理所有餐廳資訊')
+            ->body($this->grid());
+    }
+
+    public function show($id, Content $content)
+    {
+        return $content
+            ->header('Detail')
+            ->description('description')
+            ->body($this->detail($id));
+    }
+    public function edit($id, Content $content)
+    {
+        return $content
+            ->header('Edit')
+            ->description('description')
+            ->body($this->form()->edit($id));
+    }
+    public function create(Content $content)
+    {
+        return $content
+            ->header('Create')
+            ->description('description')
+            ->header('新增餐廳')
+            ->description('請於此頁面建立新餐廳')
+            ->body($this->form());
+    }
     /**
      * Make a grid builder.
      *
@@ -73,16 +105,10 @@ class RestaurantController extends AdminController
         $form->text('res_name', __('Res name'));
         $form->number('res_tel', __('Res tel'));
         $form->text('res_address', __('Res address'));
-        $form->text('res_cover', __('Res cover'));
-        $form->text('res_menu', __('Res menu'));
+        $form->image('res_cover', __('Res cover'));
+        $form->image('res_menu', __('Res menu'));
 
         return $form;
     }
-    public function index(Content $content)
-    {
-        return $content
-            ->header('餐聽管理')
-            ->description('管理所有餐廳資訊')
-            ->body($this->grid());
-    }
+    
 }

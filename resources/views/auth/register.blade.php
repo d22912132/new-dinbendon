@@ -40,6 +40,20 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="account" class="col-md-4 col-form-label text-md-right">帳號</label>
+
+                            <div class="col-md-6">
+                                <input id="account" type="account" class="form-control @error('account') is-invalid @enderror" name="account" value="{{ old('account') }}" required autocomplete="account">
+
+                                @error('account')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">密碼</label>
 
                             <div class="col-md-6">

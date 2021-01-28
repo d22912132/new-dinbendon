@@ -16,6 +16,10 @@
             @csrf
             <input type="hidden" name="id" value="{{ Auth::user()->id }}">
             <div class="form-group">
+                <label for="uname">使用者帳號：(不可修改)</label>
+                <input type="text" class="form-control" id="account" name="account" value="{{ Auth::user()->account }}" readonly>
+            </div>
+            <div class="form-group">
                 <label for="uname">E-mail：(不可修改)</label>
                 <input type="text" class="form-control" id="email" name="email" value="{{ Auth::user()->email }}" readonly>
             </div>
